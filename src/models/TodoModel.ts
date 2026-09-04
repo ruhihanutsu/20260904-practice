@@ -64,8 +64,7 @@ export async function create(data: CreateTodoRequestBody): Promise<Todo> {
 
 
     todos.push(newTodo);
-
-        await saveTodosData(todos);
+    await saveTodosData(todos);
     return newTodo;
 }
 
@@ -100,3 +99,4 @@ export async function remove(id: number): Promise<boolean> {
     await saveTodosData(filteredTodos);
     return true;
 }
+
