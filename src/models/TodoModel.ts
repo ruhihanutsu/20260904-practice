@@ -64,7 +64,8 @@ export async function create(data: CreateTodoRequestBody): Promise<Todo> {
 
 
     todos.push(newTodo);
-    await saveTodosData(todos);
+
+        await saveTodosData(todos);
     return newTodo;
 }
 
